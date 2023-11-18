@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejemplo de Validacion de un Formulario</title>
+    <style type="text/css">
+        label {
+            width: 150px;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+        input {
+            float: left;
+        }
+
+        input,
+        select {
+            width: 150px;
+            margin-bottom: 5px;
+        }
+
+        fieldset {
+            background: url(3.jpg);
+            background-size: cover;
+            width: 350px;
+            color: #ff0000;
+        }
+
+        .error {
+            border: solid 2px #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Validación de un Formulario</legend>
+        <form name="formulario" id="formulario" action="http://www.laweb.es" method="get">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" />
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" />
+            <label for="edad">Edad:</label>
+            <input name="edad" type="text" id="edad" maxlength="3" />
+            <label for="matricula">Matrícula Coche:</label>
+            <input name="matricula" type="text" id="matricula" value="XXXX AAA" />
+            <label for="provincia">Provincia:</label>
+            <select name="provincia" id="provincia">
+                <option value="0" selected="selected">Seleccione Provincia</option>
+                <option value="H">Huesca</option>
+                <option value="ZA">Zaragoza</option>
+                <option value="T">Teruel</option>
+            </select>
+            <label></label>
+            <input type="reset" name="limpiar" id="limpiar" value="Limpiar" />
+            <input type="submit" name="enviar" id="enviar" value="Enviar" />
+        </form>
+    </fieldset>
+    <script type="text/javascript" src="Formulario.js"></script>
+</body>
+
+</html>
